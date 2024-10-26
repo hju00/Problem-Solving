@@ -1,4 +1,3 @@
-
 int d(int n);
 
 int main() {
