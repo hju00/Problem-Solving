@@ -16,6 +16,7 @@
 ### 🚀 Silver
 | 문제번호 | 링크 |
 | ----- | ----- |
+|10845. 큐|[링크](./%EB%B0%B1%EC%A4%80/Silver/10845.%E2%80%85%ED%81%90/README.md)|
 |11724. 연결 요소의 개수|[링크](./%EB%B0%B1%EC%A4%80/Silver/11724.%E2%80%85%EC%97%B0%EA%B2%B0%E2%80%85%EC%9A%94%EC%86%8C%EC%9D%98%E2%80%85%EA%B0%9C%EC%88%98/README.md)|
 |1260. DFS와 BFS|[링크](./%EB%B0%B1%EC%A4%80/Silver/1260.%E2%80%85DFS%EC%99%80%E2%80%85BFS/README.md)|
 |14501. 퇴사|[링크](./%EB%B0%B1%EC%A4%80/Silver/14501.%E2%80%85%ED%87%B4%EC%82%AC/README.md)|
