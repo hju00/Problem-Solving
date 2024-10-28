@@ -22,7 +22,7 @@ def main():
     content += HEADER
     
     directories = []
-    solveds = []
+    solved_files = []
 
     for root, dirs, files in os.walk("."):
         dirs.sort()
@@ -54,12 +54,13 @@ def main():
             directories.append(directory)
 
         for file in files:
-            if category not in solveds:
-                file_path = os.path.join(root, file)
+            file_path = os.path.join(root, file)
+            # 이미 처리한 파일인지 확인하여 중복 방지
+            if file_path not in solved_files:
                 solved_date = get_solved_date(file_path)  # 해결 날짜 가져오기
                 content += "|{}|{}|[링크]({})|\n".format(category, solved_date, parse.quote(file_path))
-                solveds.append(category)
-                print("category : " + category)
+                solved_files.append(file_path)  # 중복 방지를 위해 추가
+                print("Processed file:", file_path)
 
     with open("README.md", "w") as fd:
         fd.write(content)
