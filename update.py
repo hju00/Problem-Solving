@@ -1,3 +1,8 @@
+#!/usr/bin/env python
+
+import os  # os 모듈이 필요합니다.
+from urllib import parse
+
 HEADER="""# 
 # 백준 & 프로그래머스 문제 풀이 목록
 
@@ -43,7 +48,7 @@ def main():
 
         for file in files:
             if category not in solveds:
-                # 추가: 해결 날짜를 예시로 'YYYY-MM-DD'로 기록
+                # 해결 날짜 예시
                 solved_date = "YYYY-MM-DD"  # 실제 해결 날짜를 가져오는 로직 추가 가능
                 content += "|{}|{}|[링크]({})|\n".format(category, solved_date, parse.quote(os.path.join(root, file)))
                 solveds.append(category)
