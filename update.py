@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-
-import os
-from urllib import parse
-
 HEADER="""# 
 # 백준 & 프로그래머스 문제 풀이 목록
 
@@ -14,8 +9,8 @@ def main():
     content = ""
     content += HEADER
     
-    directories = [];
-    solveds = [];
+    directories = []
+    solveds = []
 
     for root, dirs, files in os.walk("."):
         dirs.sort()
@@ -42,13 +37,15 @@ def main():
                 content += "## 📚 {}\n".format(directory)
             else:
                 content += "### 🚀 {}\n".format(directory)
-                content += "| 문제번호 | 링크 |\n"
-                content += "| ----- | ----- |\n"
+                content += "| 문제번호 | 해결 날짜 | 링크 |\n"
+                content += "| ----- | --------- | ----- |\n"
             directories.append(directory)
 
         for file in files:
             if category not in solveds:
-                content += "|{}|[링크]({})|\n".format(category, parse.quote(os.path.join(root, file)))
+                # 추가: 해결 날짜를 예시로 'YYYY-MM-DD'로 기록
+                solved_date = "YYYY-MM-DD"  # 실제 해결 날짜를 가져오는 로직 추가 가능
+                content += "|{}|{}|[링크]({})|\n".format(category, solved_date, parse.quote(os.path.join(root, file)))
                 solveds.append(category)
                 print("category : " + category)
 
