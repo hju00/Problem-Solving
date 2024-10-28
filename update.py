@@ -1,14 +1,21 @@
 #!/usr/bin/env python
 
-import os  # os 모듈이 필요합니다.
+import os
 from urllib import parse
+from datetime import datetime
 
-HEADER="""# 
+HEADER = """# 
 # 백준 & 프로그래머스 문제 풀이 목록
 
 프로그래머스의 경우, 푼 문제 목록에 대한 마이그레이션이 필요합니다.
 
 """
+
+def get_solved_date(file_path):
+    # 파일의 마지막 수정 시간을 가져와 해결 날짜로 사용
+    timestamp = os.path.getmtime(file_path)
+    solved_date = datetime.fromtimestamp(timestamp).strftime("%Y-%m-%d")
+    return solved_date
 
 def main():
     content = ""
@@ -48,9 +55,9 @@ def main():
 
         for file in files:
             if category not in solveds:
-                # 해결 날짜 예시
-                solved_date = "YYYY-MM-DD"  # 실제 해결 날짜를 가져오는 로직 추가 가능
-                content += "|{}|{}|[링크]({})|\n".format(category, solved_date, parse.quote(os.path.join(root, file)))
+                file_path = os.path.join(root, file)
+                solved_date = get_solved_date(file_path)  # 해결 날짜 가져오기
+                content += "|{}|{}|[링크]({})|\n".format(category, solved_date, parse.quote(file_path))
                 solveds.append(category)
                 print("category : " + category)
 
