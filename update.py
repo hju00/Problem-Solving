@@ -12,9 +12,9 @@ HEADER = """#
 """
 
 def get_commit_date(file_path):
-    # Git에서 마지막 커밋 날짜를 가져옴
+    # Git에서 마지막 커밋 날짜를 가져옴 (YYYY-MM-DD 형식)
     result = subprocess.run(
-        ["git", "log", "-1", "--format=%Y-%m-%d", file_path],
+        ["git", "log", "-1", "--format=%cd", "--date=short", file_path],
         capture_output=True,
         text=True
     )
