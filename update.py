@@ -21,8 +21,7 @@ def main():
     content = ""
     content += HEADER
     
-    directories = []
-    solved_files = []
+    directories = set()  # 각 디렉터리별로 한 번만 테이블 추가하기 위해 set 사용
 
     for root, dirs, files in os.walk("."):
         dirs.sort()
@@ -43,7 +42,8 @@ def main():
         
         if directory == '.':
             continue
-            
+
+        # 새로운 category가 발견되면 테이블 헤더 추가
         if directory not in directories:
             if directory in ["백준", "프로그래머스"]:
                 content += "## 📚 {}\n".format(directory)
@@ -51,16 +51,14 @@ def main():
                 content += "### 🚀 {}\n".format(directory)
                 content += "| 문제번호 | 해결 날짜 | 링크 |\n"
                 content += "| ----- | --------- | ----- |\n"
-            directories.append(directory)
+            directories.add(directory)  # 추가한 디렉터리 기록
 
+        # 파일별로 처리하여 날짜와 링크 추가
         for file in files:
             file_path = os.path.join(root, file)
-            # 이미 처리한 파일인지 확인하여 중복 방지
-            if file_path not in solved_files:
-                solved_date = get_solved_date(file_path)  # 해결 날짜 가져오기
-                content += "|{}|{}|[링크]({})|\n".format(category, solved_date, parse.quote(file_path))
-                solved_files.append(file_path)  # 중복 방지를 위해 추가
-                print("Processed file:", file_path)
+            solved_date = get_solved_date(file_path)  # 해결 날짜 가져오기
+            content += "|{}|{}|[링크]({})|\n".format(category, solved_date, parse.quote(file_path))
+            print("Processed file:", file_path)
 
     with open("README.md", "w") as fd:
         fd.write(content)
