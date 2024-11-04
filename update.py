@@ -13,6 +13,7 @@ HEADER = """#
 def main():
     content = HEADER
     directories = []
+    solveds = []
 
     for root, dirs, files in os.walk("."):
         dirs.sort()
@@ -27,11 +28,11 @@ def main():
         category = os.path.basename(root)
         directory = os.path.basename(os.path.dirname(root))
         
-        # Skip specific folders that don't need to be processed
+        # 특정 폴더는 건너뜀
         if category == 'images' or directory == '.':
             continue
             
-        # Add main directory section headers
+        # 메인 디렉토리 섹션 헤더 추가
         if directory not in directories:
             if directory in ["백준", "프로그래머스", "SWEA"]:
                 content += "## 📚 {}\n".format(directory)
@@ -41,10 +42,12 @@ def main():
                 content += "| ----- | ----- |\n"
             directories.append(directory)
 
-        # Append problem details for each file in the directory
+        # 각 파일에 대해 문제 번호가 중복되지 않으면 출력
         for file in files:
-            file_path = os.path.join(root, file)
-            content += "|{}|[링크]({})|\n".format(category, parse.quote(file_path))
+            if category not in solveds:
+                file_path = os.path.join(root, file)
+                content += "|{}|[링크]({})|\n".format(category, parse.quote(file_path))
+                solveds.append(category)
 
     with open("README.md", "w") as fd:
         fd.write(content)
