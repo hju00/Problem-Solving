@@ -1,43 +1,31 @@
-#include <iostream>
-#include <string>
-#include <algorithm>
- 
+#include<iostream>
+#include<algorithm>
+#include<string>
 using namespace std;
- 
-int main(int argc, char** argv) {
-    int test_case;
-    int T;
- 
-    cin>>T;
- 
-    for(test_case = 1; test_case <= T; ++test_case)
-    {
-        string s, e;
-        bool ans;
-        cin >> s;
-        cin >> e;
-        for (int i = e.length() - 1; i >= 0; i--) {
-            if (e[i] == 'Y') {
-                //e = e - 'Y';
-                e.erase(i, 1);
-                reverse(e.begin(), e.end());
-            }
-            else if (e[i] == 'X') {
-                //e = e - 'X';
-                e.erase(i, 1);
-            }
-            if (e == s) {
-                ans = true;
-                break;
-            }
-            else if (e.length() < s.length()) {
-                ans = false;
-                break;
-            }
+
+string S, E;
+
+bool is_ans() {
+    // E의 길이가 S의 길이보다 길면 계속 변환 시도
+    while (S.length() < E.length()) {
+        if (E.back() == 'X') {
+            E.pop_back();  // 끝이 'X'이면 마지막 문자 제거
+        } else {
+            E.pop_back();
+            reverse(E.begin(), E.end());  // 끝이 'Y'이면 문자 제거 후 뒤집기
         }
-         
-        if (ans) cout << '#' << test_case << " Yes" << endl;
-        else cout << '#' << test_case << " No" << endl;
     }
-    return 0;//정상종료시 반드시 0을 리턴해야합니다.
+    return S == E;  // 최종적으로 S와 E가 동일한지 확인
+}
+
+int main() {
+    int T;
+    cin >> T;
+
+    for (int test_case = 1; test_case <= T; ++test_case) {
+        cin >> S >> E;
+        if (is_ans()) cout << "#" << test_case << " Yes" << endl;
+        else          cout << "#" << test_case << " No" << endl;
+    }
+    return 0;
 }
