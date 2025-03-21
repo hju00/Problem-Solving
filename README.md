@@ -71,6 +71,7 @@
 |5430. AC|[링크](./%EB%B0%B1%EC%A4%80/Gold/5430.%E2%80%85AC/README.md)|
 |7569. 토마토|[링크](./%EB%B0%B1%EC%A4%80/Gold/7569.%E2%80%85%ED%86%A0%EB%A7%88%ED%86%A0/README.md)|
 |7576. 토마토|[링크](./%EB%B0%B1%EC%A4%80/Gold/7576.%E2%80%85%ED%86%A0%EB%A7%88%ED%86%A0/README.md)|
+|9019. DSLR|[링크](./%EB%B0%B1%EC%A4%80/Gold/9019.%E2%80%85DSLR/README.md)|
 |9251. LCS|[링크](./%EB%B0%B1%EC%A4%80/Gold/9251.%E2%80%85LCS/README.md)|
 |9663. N－Queen|[링크](./%EB%B0%B1%EC%A4%80/Gold/9663.%E2%80%85N%EF%BC%8DQueen/N%EF%BC%8DQueen.cc)|
 ### 🚀 Silver
