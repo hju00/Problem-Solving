@@ -57,6 +57,7 @@
 | 문제번호 | 링크 |
 | ----- | ----- |
 |10026. 적록색약|[링크](./%EB%B0%B1%EC%A4%80/Gold/10026.%E2%80%85%EC%A0%81%EB%A1%9D%EC%83%89%EC%95%BD/README.md)|
+|1005. ACM Craft|[링크](./%EB%B0%B1%EC%A4%80/Gold/1005.%E2%80%85ACM%E2%80%85Craft/README.md)|
 |1074. Z|[링크](./%EB%B0%B1%EC%A4%80/Gold/1074.%E2%80%85Z/Z.cc)|
 |11404. 플로이드|[링크](./%EB%B0%B1%EC%A4%80/Gold/11404.%E2%80%85%ED%94%8C%EB%A1%9C%EC%9D%B4%EB%93%9C/README.md)|
 |1253. 좋다|[링크](./%EB%B0%B1%EC%A4%80/Gold/1253.%E2%80%85%EC%A2%8B%EB%8B%A4/%EC%A2%8B%EB%8B%A4.cc)|
