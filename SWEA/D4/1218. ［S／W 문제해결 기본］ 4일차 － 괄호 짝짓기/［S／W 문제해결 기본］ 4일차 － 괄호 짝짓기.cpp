@@ -48,7 +48,7 @@ int main(int argc, char** argv)
             else    break;
         }
 
-        if(is_valid)   cout << "#" << test_case << " 1\n";
+        if(is_valid && dq.empty())   cout << "#" << test_case << " 1\n";
         else    cout << "#" << test_case << " 0\n";
 	}
 	return 0;//정상종료시 반드시 0을 리턴해야합니다.
