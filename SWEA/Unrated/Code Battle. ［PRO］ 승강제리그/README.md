@@ -1,0 +1,13 @@
+# [Pro] 승강제 리그
+
+[문제 링크](https://www.google.com/search?q=https://swexpertacademy.com/main/code/problem/problemDetail.do%3FcontestProbId%3DAYWd3_d66FUDFAV8)
+
+### 성능 요약
+
+메모리: 108,428 KB, 시간: 2,359 ms, 코드길이: 2,517 Bytes
+
+### 제출 일자
+
+2025-08-20 11:12
+
+> 출처: SW Expert Academy, [https://swexpertacademy.com/main/code/problem/problemList.do](https://swexpertacademy.com/main/code/problem/problemList.do)
