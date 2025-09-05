@@ -106,6 +106,7 @@
 |Code Battle. ［PRO］ 성적조회|[링크](./SWEA/Unrated/Code%20Battle.%E2%80%85%EF%BC%BBPRO%EF%BC%BD%E2%80%85%EC%84%B1%EC%A0%81%EC%A1%B0%ED%9A%8C/README.md)|
 |Code Battle. ［PRO］ 승강제리그|[링크](./SWEA/Unrated/Code%20Battle.%E2%80%85%EF%BC%BBPRO%EF%BC%BD%E2%80%85%EC%8A%B9%EA%B0%95%EC%A0%9C%EB%A6%AC%EA%B7%B8/README.md)|
 |Code Battle. ［PRO］ 온라인마트|[링크](./SWEA/Unrated/Code%20Battle.%E2%80%85%EF%BC%BBPRO%EF%BC%BD%E2%80%85%EC%98%A8%EB%9D%BC%EC%9D%B8%EB%A7%88%ED%8A%B8/README.md)|
+|Code Battle. ［PRO］ 카페2|[링크](./SWEA/Unrated/Code%20Battle.%E2%80%85%EF%BC%BBPRO%EF%BC%BD%E2%80%85%EC%B9%B4%ED%8E%982/README.md)|
 |Code Battle. ［PRO］ 택시 호출 서비스|[링크](./SWEA/Unrated/Code%20Battle.%E2%80%85%EF%BC%BBPRO%EF%BC%BD%E2%80%85%ED%83%9D%EC%8B%9C%20%ED%98%B8%EC%B6%9C%20%EC%84%9C%EB%B9%84%EC%8A%A4/README.md)|
 ## 📚 백준
 ### 🚀 Bronze
