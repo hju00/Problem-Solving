@@ -206,6 +206,7 @@
 ### 🚀 Platinum
 | 문제번호 | 링크 |
 | ----- | ----- |
+|1162. 도로포장|[링크](./%EB%B0%B1%EC%A4%80/Platinum/1162.%E2%80%85%EB%8F%84%EB%A1%9C%ED%8F%AC%EC%9E%A5/README.md)|
 |16930. 달리기|[링크](./%EB%B0%B1%EC%A4%80/Platinum/16930.%E2%80%85%EB%8B%AC%EB%A6%AC%EA%B8%B0/README.md)|
 ### 🚀 Silver
 | 문제번호 | 링크 |
