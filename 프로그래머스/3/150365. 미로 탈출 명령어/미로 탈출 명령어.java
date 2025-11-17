@@ -3,8 +3,8 @@ import java.util.*;
 class Solution {
     
     static int N, M;
-    static int dy[] = {0, -1, 1, 0};    // l, r, u, d 순
     static int dx[] = {1, 0, 0, -1};
+    static int dy[] = {0, -1, 1, 0};
     static String ds[] = {"d", "l", "r", "u"};
     
     static class Edge implements Comparable<Edge>{
@@ -17,6 +17,7 @@ class Solution {
             this.s = s;
         }
         
+        // 사전 순 정렬
         public int compareTo(Edge o) {
             return this.s.compareTo(o.s);
         }
@@ -45,6 +46,7 @@ class Solution {
             int mStep = k - cur.s.length();
             int mDist = Math.abs(r - cur.x) + Math.abs(c - cur.y);
             
+            // 가지치기가 핵심
             if(mStep % 2 != mDist % 2)  continue;
             if(mStep < mDist) continue;
             if(cur.x == r && cur.y == c && cur.s.length() == k)   return cur.s;
